@@ -1,0 +1,47 @@
+.leftbar {
+    width: 150px;
+    height: calc(100vh);
+    position: sticky;
+    top: 0;
+    
+
+    @media all and (max-width: 1025px) {
+        display: none;
+    }
+
+    .icons {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 25px;
+        gap: 20px;
+        padding-left: 0;
+        position: fixed;
+        left: 50px;
+        bottom: 0;
+        padding: 0 7.5px;
+
+        li{
+
+            .icon {
+                color: #8892B0;
+                font-size: 25px;
+
+                &:hover {
+                    color: #0a192f;
+                }
+            }
+            
+            
+        }
+        &:after{
+            content: "";
+            display: block;
+            width: 1px;
+            height: 100px;
+            margin: 0 auto;
+            background-color: #8892B0;
+        }
+    }
+}

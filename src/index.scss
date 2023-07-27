@@ -1,0 +1,14 @@
+
+
+.main-container {
+    width: calc(100% - 300px);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    color: #6d7796;
+
+    @media all and (max-width: 1025px) {
+        width: 100%;
+    }
+}

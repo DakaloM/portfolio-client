@@ -1,0 +1,704 @@
+.home {
+    flex: 8;
+    padding: 0;
+    margin-top: 140px;
+    
+
+    .height{
+        height: fit-content;
+        margin-bottom: 150px !important;
+    }
+
+    .container {
+        padding: 0 70px;
+        width: calc(100% - 140px);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        @media all and (max-width: 768px) {
+                padding: 0 30px;
+                width: calc(100% - 60px);
+        }
+
+        .scrollTop {
+            width: fit-content;
+            height: fit-content;
+            background-color: #6d7796;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            position: fixed;
+            right: 100px;
+            bottom: 50px;
+            z-index: 30;
+            -webkit-box-shadow: 0px 0px 21px -11px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 21px -11px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 21px -11px rgba(0,0,0,0.75);
+
+            @media all and (max-width: 768px) {
+                right: 10px;
+        }
+           
+            // &:hover{
+            //     background-color: #6d77967a;
+            // }
+            
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: 800;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            font-family: 'Source Code Pro';
+
+            @media all and (min-width: 600px) {
+                
+                &::after {
+                    display: block;
+                    content: "";
+                    height: 1px;
+                    width: 300px;
+                    background-color: #6d7796;
+                    margin-left: 20px;
+                }
+            }
+
+            &.last {
+                &::after {
+                    display: none;
+                }
+            }
+
+        }
+
+        .intro {
+
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 40px;
+            justify-content: center;
+
+            
+
+            .tag {
+                font-family: 'Source Code Pro';
+                // color: #0ee4c7;
+                color: #0A192F;
+            }
+
+            .name {
+                font-size: clamp(40px, 8vw, 75px);
+                font-weight: 600;
+                // color: #CCD6F6;
+                color: #0A192F;
+
+            }
+            .occupation {
+                font-size: clamp(30px, 8vw, 65px);
+                color: #6d7796;
+            }
+
+            .aboutMe {
+                max-width: 540px;
+                color: gray;
+                font-size: 20px;
+                line-height: 30px;
+                margin-bottom: 40px;
+                font-weight: 300;
+                width: 100%;
+
+                @media all and (max-width: 1025px) {
+                    font-size: 17px;
+                }
+                @media all and (max-width: 768px) {
+                    font-size: 15px;
+                }
+
+
+            }
+
+            .introBtn {
+                text-decoration: none;
+                width: fit-content;
+                background: transparent;
+                border: 1px solid #6d7796;
+                color: #6d7796;
+                font-size: 17px;
+                padding: 18px 35px;
+                border-radius: 5px;
+                cursor: pointer;
+
+                
+            }
+        }
+
+        .aboutSection {
+            width: 100%;
+
+            .aboutContainer {
+                display: flex;
+                align-items: start;
+                margin-bottom: 30px;
+                justify-content: flex-end;
+
+                .contentSide {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+
+                    
+
+                    .about {
+                        font-size: 16px;
+                        font-weight: 600;
+                        margin-bottom: 10px;
+                        line-height: 25px;
+                        color: #6d7796;
+
+                    }
+                }
+
+               
+                
+            }
+        }
+
+        
+
+        .skills {
+
+            margin-bottom: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+
+            .desc {
+                color: gray;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                background-color: #fff;
+                margin-bottom: 50px;
+                justify-content: flex-start;
+                margin-top: 50px;
+                &::after{
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    width: 12px;
+                    background-color: #6d7796;
+                    margin-left: 5px;
+                }
+                &::before{
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    width: 12px;
+                    background-color: #6d7796;
+                    margin-right: 5px;
+                }
+            }
+            .skillContainer {
+
+                display: flex;
+                gap: 50px;
+                padding: 20px 100px;
+                width: calc(100% - 200px);
+                justify-content: center;
+                overflow: hidden;
+                margin-bottom: 50px;
+
+                @media all and (max-width: 1025px) {
+                    padding: 20px 0;
+                    width: calc(100% - 0px);
+                    
+                }
+                @media all and (max-width: 768px) {
+                    padding: 20px 0;
+                    width: calc(100%);
+                    
+                }
+                @media all and (max-width: 610px) {
+                   flex-direction: column;
+                    
+                }
+
+                .skill {
+                    flex: 1;
+                    -webkit-box-shadow: 0px 0px 20px -11px rgba(0,0,0,0.61);
+                    -moz-box-shadow: 0px 0px 20px -11px rgba(0,0,0,0.61);
+                    box-shadow: 0px 0px 20px -11px rgba(0,0,0,0.61);
+                    padding: 20px;
+                    border-radius: 5px;
+                    background-color: #fff;
+
+                   
+
+                    img {
+                        width:20px;
+                        height:20px;
+                        object-fit: cover;
+                        margin-right: 5px;
+                    }
+
+                    .top {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+
+                        .icon {
+                            font-size: 25px;
+                            color: #6d7796;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            background-color: #6d7796;
+                            color: white;
+                            padding: 5px;
+                            margin-bottom: 20px;
+                        }
+
+                        .skillTitle {
+                            font-size: 18px;
+                            font-weight: 700;
+                            margin-bottom: 20px;
+                            font-family: 'Source Code Pro';
+                            text-align: center;
+                        }
+
+                        .skillInfo {
+                            color: gray;
+                            font-size: 14px;
+                            margin-bottom: 20px;
+                            text-align: center;
+                            
+                        }
+
+                        
+                    }
+
+                    .languages {
+
+                        ul{
+                            list-style-type:none;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+
+                            li {
+                                width: fit-content;
+                                height: fit-content;
+                                .wrapper {
+                                    display: flex;
+                                    align-items: center;
+                                    width: 150px;
+                                    justify-content: flex-start;
+                                    padding: 10px;
+
+                                    @media all and (max-width: 768px) {
+                                        padding: 10px 0;
+                                        
+                                    }
+
+                                    span {
+                                        font-size: 16px;
+                                        font-weight: 700;
+                                        font-family: 'Source Code Pro';
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                
+            }
+        }
+
+        .projects {
+            width: 100%;
+            margin-bottom: 100px;
+
+            .title {
+                margin-bottom: 50px;
+            }
+            
+
+            .desc {
+                font-size: 14px;
+                color: rgb(174, 174, 174);
+                width: 400px;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .projectList {
+
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+                margin-bottom: 50px;
+                
+                
+
+                .listItem {
+                    display: flex;
+                    width: calc(100% - 40px);
+                    height: fit-content;
+                    max-height: 400px;
+                    padding: 50px 20px;
+                    gap: 50px;
+                    align-items: left;
+                    margin: 40px 0;
+                    justify-content: space-between;
+                    -webkit-box-shadow: 0px 0px 20px -11px rgba(0,0,0,0.61);
+                    -moz-box-shadow: 0px 0px 20px -11px rgba(0,0,0,0.61);
+                    box-shadow: 0px 0px 20px -11px rgba(0,0,0,0.61);
+                    border: 1px solid rgb(234, 234, 234);
+                    border-radius: 10px;
+
+                    @media all and (max-width: 810px) {
+                        flex-direction: column;
+                        max-height: fit-content;
+                         
+                     }
+
+                    
+
+                    .imgContainer {
+                        min-width:49% !important;
+                        max-height: 300px;
+                        height: 100%;
+                        z-index: 1;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            max-height: 300px;
+                            object-fit: contain;
+                            z-index: 1;
+                            cursor: pointer;
+                            border-radius: 5px;
+                            border: 1px solid rgb(225, 225, 225);
+                            -webkit-box-shadow: 0px 0px 21px -11px rgba(0,0,0,0.75);
+                            -moz-box-shadow: 0px 0px 21px -11px rgba(0,0,0,0.75);
+                            box-shadow: 0px 0px 21px -11px rgba(0,0,0,0.75);
+                        }
+                    }
+
+                    
+
+                    .info {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+
+                        .type {
+                            font-size: 14px;
+                            margin-bottom: 10px;
+                            font-family: 'Source Code Pro';
+                        }
+                        .projectTitle {
+
+                            font-size: 20px;
+                            font-weight: 600;
+                            margin-bottom: 30px;
+                            
+                        }
+
+                        .productDesc {
+                            background-color: #6d7796;
+                            padding: 20px;
+                            width: 130%;
+                            margin-bottom: 30px;
+                            border-radius: 5px;
+                            color: #fefefe;
+                            font-size: 14px;
+                            font-family: 'Source Code Pro',;
+                            text-align: right;
+                            z-index: 5;
+
+                            @media all and (max-width: 810px) {
+                                width: calc(100% - 40px);
+                                text-align: left;
+                                 
+                             }
+
+                        }
+
+                        .actions {
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 10px;
+
+                            .link {
+                                text-decoration: none;
+                                color: inherit;
+                                display: flex;
+                                align-items: center;
+                                gap: 5px;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            span {
+                                font-family: 'Source Code Pro';
+                                display: flex;
+                                align-items: center;
+                                font-size: 14px;
+                                cursor: pointer;
+
+                                .icon {
+                                    font-size: 20px;
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
+
+                    &.even {
+                        display: flex;
+                        flex-direction: row-reverse;
+
+
+                        @media all and (max-width: 810px) {
+                            flex-direction: column;
+                             
+                         }
+
+                        .info {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+    
+                            
+                            
+    
+                            .productDesc {
+                                background-color: #6d7796;
+                                padding: 20px;
+                                width: 130%;
+                                margin-bottom: 30px;
+                                border-radius: 5px;
+                                color: #fefefe;
+                                font-size: 14px;
+                                font-family: 'Source Code Pro';
+                                text-align: left;
+                                
+                                @media all and (max-width: 810px) {
+                                    width: calc(100% - 40px);
+                                     
+                                 }
+                                
+                                
+                                
+                            }
+    
+                            
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        .contactSection {
+            width: 100%;
+            margin-bottom: 100px;
+
+            .title {
+                margin-bottom: 70px;
+            }
+
+            .wrapper {
+
+                display: flex;
+                align-items: center;
+                gap: 50px;
+                padding-top: 50px;
+
+                @media all and (max-width: 768px) {
+                    flex-direction: column;
+                     
+                 }
+
+                .left {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .talkTitle {
+                        font-size: 18px;
+                        font-weight: 700;
+                        margin-bottom: 20px;
+                        border-bottom: 1px solid #6d7796;
+                    }
+
+                    .listItem {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        -webkit-box-shadow: 0px 8px 12px -5px rgba(0,0,0,0.61);
+                        -moz-box-shadow: 0px 8px 12px -5px rgba(0,0,0,0.61);
+                        box-shadow: 0px 8px 12px -5px rgba(0,0,0,0.61);
+                        margin-bottom: 30px;
+                        width: 300px;
+                        padding: 30px;
+                        border-radius: 10px;
+
+                        .icon {
+                            color: gray;
+                            margin-bottom: 10px;
+                        }
+
+                        @media all and (max-width: 810px) {
+                            width: 200px
+                         }
+
+                        img {
+                            width: 20px;
+                            height: 20px;
+                            object-fit: cover;
+                            margin-bottom: 10px;
+                        }
+
+                        .social {
+                            font-size: 18px;
+                            margin-bottom: 10px;
+                            color: #6d7796;
+                            font-weight: 600;
+                            font-family: 'Source Code Pro';
+                        }
+
+                        .value {
+                            color: gray;
+                            font-size: 14px;
+                            margin-bottom: 10px;
+                            font-family: 'Source Code Pro';
+                        }
+
+                        .action {
+                            display: flex;
+                            align-items: center;
+                            font-size: 14px;
+                            color: gray;
+                            cursor: pointer;
+
+                            .icon {
+                                font-size: 20px;
+                                margin-left: 5px;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+
+                .right {
+
+                    flex: 1;
+                    .formContainer {
+                        width: 100%;
+                        form {
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+
+                            .header {
+                                font-size: 20px;
+                                font-weight: 700;
+                                margin-bottom: 30px;
+                            }
+
+                            .inputGroup {
+                                -webkit-box-shadow: 0px 8px 12px -5px rgba(0,0,0,0.61);
+                        -moz-box-shadow: 0px 8px 12px -5px rgba(0,0,0,0.61);
+                        box-shadow: 0px 8px 12px -5px rgba(0,0,0,0.61);
+                                width: calc(100% - 20px);
+                                border: 1px solid lightgray;
+                                display: flex;
+                                flex-direction: column;
+                                padding: 10px;
+                                margin-bottom: 40px;
+                                border-radius: 10px;
+                                position: relative;
+
+                                label {
+                                    width: fit-content;
+                                    background-color: white;
+                                    position: absolute;
+                                    font-size: 14px;
+                                    height: fit-content;
+                                    top: -17px;
+                                    z-index: 99999999;
+                                    padding: 3px 5px;
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                }
+
+                                input, textarea {
+                                    height: 40px;
+                                    border: none;
+                                    outline: none;
+                                    font-size: 16px;
+
+                                    &::placeholder {
+                                        color: lightgray;
+                                    }
+
+                                    &.textarea {
+                                        height: 200px;
+                                    }
+                                    
+
+                                }
+                            }
+
+                            button {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 160px;
+                                height: 40px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border: none;
+                                background-color: #6d7796;
+                                color: white;
+                                border-radius: 5px;
+                                font-size: 16px;
+                                cursor: pointer;
+                                align-self: end;
+                                -webkit-box-shadow: 0px 8px 12px -5px rgba(0,0,0,0.61);
+                        -moz-box-shadow: 0px 8px 12px -5px rgba(0,0,0,0.61);
+                        box-shadow: 0px 8px 12px -5px rgba(0,0,0,0.61);
+
+                                .icon {
+                                    margin-left: 7px;
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
